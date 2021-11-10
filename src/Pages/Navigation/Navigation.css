@@ -1,0 +1,14 @@
+*{
+    text-decoration: none;
+}
+.navText{
+    color:aliceblue;
+    margin: 2vmax;
+    font-size: large;
+}
+.navText:hover{
+    background-color: rgb(104, 104, 238);
+    padding: 4px 2vmax 4px 2vmax;
+    border-radius: 5px;
+    margin: 0vmax;
+}
