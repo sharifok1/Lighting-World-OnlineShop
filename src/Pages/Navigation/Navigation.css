@@ -3,12 +3,19 @@
 }
 .navText{
     color:aliceblue;
-    margin: 2vmax;
+    margin: 1.8vmax;
     font-size: large;
 }
 .navText:hover{
-    background-color: rgb(104, 104, 238);
-    padding: 4px 2vmax 4px 2vmax;
+    background-color: rgb(12, 12, 180);
+    padding: 4px 1.8vmax 4px 1.8vmax;
     border-radius: 5px;
     margin: 0vmax;
+}
+
+@media only screen and (max-width:359px){
+    .navigation-response{
+    display: flex;
+    flex-direction: column;
+}
 }

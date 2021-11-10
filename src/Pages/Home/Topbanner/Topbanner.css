@@ -1,3 +1,47 @@
 .topbanner{
+    /* height: 600px; */
     width: 100%;
+}
+.banner-img{
+    background-image: url('https://i.ytimg.com/vi/Q142xW1qu3o/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.descrip{
+    background-color: rgba(7, 1, 39, 0.699);
+    padding:50px;
+    /* padding-bottom: 50px;
+    padding-top: 50px; */
+    color:white;
+    border-radius: 10px;
+    box-shadow: 0  0 10px 10px white;
+    font-weight: 600;
+    font-size: 25px;
+}
+.hotOffer{
+    font-size: 30px;
+    color: rgb(247, 208, 208);
+    text-shadow: 5px 10px 8px rgba(24, 21, 21, 0.863), 
+    0px -8px 5px rgba(24, 20, 20, 0.993);
+}
+.fifty{
+    font-size: 100px;
+    color: crimson;
+    text-shadow: 2px 9px 5px rgba(245, 242, 242, 0.863), 
+    0px -4px 10px rgba(255, 255, 255, 0.993);
+}
+.banner-btn{
+    background-color: aqua;
+    padding: 10px;
+    margin-top: -50px;
+    color:black;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 10px;
+    border:1px solid black;
+}
+.banner-btn:hover{
+    background-color: black;
+    color:white;
 }

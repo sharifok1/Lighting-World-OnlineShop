@@ -1,0 +1,28 @@
+.input-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reg-filed{
+    width: 60%;
+    margin: 5px;
+    padding: 5px;
+    border:0;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 17px;
+}
+.reg-btn{
+    width: 63%;
+    margin: 10px;
+    padding: 8px;
+    background-color: cadetblue;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+.reg-btn:hover{
+    background-color: rgb(52, 154, 223);
+}

@@ -1,21 +1,37 @@
-import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import {  NavLink } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth/useAuth';
 import "./Navigation.css"
 
 
 const Navigation = () => {
+  const {user, logOut}=useAuth()
+  const logOutHandler =()=>{
+    
+    const logOuts = window.confirm('Are you sure you want to logout?');
+    if(logOuts === true){
+      logOut()
+    }
+    else{
+      return
+    }
+    
+  }
     return (
-        <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+       <div>
+          <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" 
+        style={{backgroundColor:'#150254',paddingBottom:'20PX'}}>
+          
           <Toolbar>
             <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 2 }}
+              sx={{ mr: 0 }}
             >
             </IconButton>
             <Grid container>
@@ -24,21 +40,30 @@ const Navigation = () => {
                 Lighting World    
          </Typography>
         </Grid>
-        <Grid item xs={12} sm={9}>
-            <div>
+        <Grid item xs={12} sm={9} >
+            <div className='navigation-response'>
                 <NavLink to="/Home" className="navText">Home</NavLink>
                 <NavLink to="/AllProduct" className="navText">Poducts</NavLink>
-                <NavLink to="/Dashboard" className="navText">Dashboard</NavLink>
+              {
+                user.email?
+                  <>
+                    <NavLink to="/Dashboard" className="navText">Dashboard</NavLink>
+                    <small style={{backgroundColor:"#fff",color:"#000", padding:'2px',borderRadius:'5px'}}>
+                      {user.displayName.split(" ",1)}</small>
+                    <Button onClick={logOutHandler}>LogOut</Button>
+                 </>:
                 <NavLink to="/Login" className="navText">Login</NavLink>
+              }  
             </div>
     
         </Grid>
         </Grid>
            
           </Toolbar>
-    
         </AppBar>
       </Box>
+       </div>
+      
     );
 };
 

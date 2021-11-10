@@ -4,11 +4,16 @@
     padding-top:20px;
 }
 .payment-card{
+    position: relative;
+    right:20px;
     max-height: 150px;
-    padding: 25px;
+    /* padding: 15px; */
+    /* padding-right: 10px; */
     margin: 0;
+    width: 70%;
 }
 .foter-txt{
     margin-bottom: -10px;
+    padding-bottom: 10px;
     margin: 0;
 }
