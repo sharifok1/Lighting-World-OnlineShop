@@ -24,10 +24,14 @@ A general user can do some effective activites on Lighting World web site..
 - User all data will be stored to our database
 
 ### for more information please feel free to knock me -
+
 email: sharifok1@gmail.com
+
 phone: 01851515567
 
 ## -----------Thanks for read------------
 Md. Shariful Islam
+
 B.Sc. In Computer Science & engineering
+
 full  stack Junior Web developer
