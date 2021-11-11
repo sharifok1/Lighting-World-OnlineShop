@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './ContextApi/AuthProvider/AuthProvider';
 import AllProduct from './Pages/AllProduct/AllProduct';
 import Login from './Pages/Authentication/Login/Login';
+import PrivateRoute from './Pages/Authentication/PrivateRoute/PrivateRoute';
 import Registration from './Pages/Authentication/Registration/Registration';
 import Dashboard from './Pages/DashBoard/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
@@ -24,9 +25,9 @@ function App() {
           <Route path="/Home">
           <Home></Home>
           </Route>
-          <Route path="/AllProduct">
+          <PrivateRoute path="/AllProduct">
           <AllProduct></AllProduct>
-          </Route>
+          </PrivateRoute>
           <Route path="/DisplayProduct">
           <AllProduct></AllProduct>
           </Route>

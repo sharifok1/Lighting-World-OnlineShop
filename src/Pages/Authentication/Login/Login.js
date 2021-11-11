@@ -2,19 +2,25 @@ import { Button, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth/useAuth';
 
 const Login = () => {
     const { passwordLogin,firebaseError,user,googleLogin,}=useAuth();
-  const history = useHistory()
+  const history = useHistory();
+  const location = useLocation();
 
   const { register, handleSubmit } = useForm();
 
   const onSubmit = data => {
-    passwordLogin(data.email, data.password, data.name, history)
+    passwordLogin(data.email, data.password, data.name, history, location)
   }
+
+  const googleLoginHadler = ()=>{
+    googleLogin(history,location);
+  }
+
     return (
         <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
@@ -42,7 +48,7 @@ const Login = () => {
                {/* //google button---------------- */}
                 <button sx={{border:1, bgcolor:'text.disabled',color:'white'
               }}
-              onClick={googleLogin}
+              onClick={googleLoginHadler}
                 style={{
                   display:'flex',
                   margin:'auto',

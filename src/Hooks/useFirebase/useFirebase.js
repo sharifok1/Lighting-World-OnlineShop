@@ -44,18 +44,18 @@ const useFirebase =()=>{
     }
     
     //log in email password ------------------------ 
-    const passwordLogin = (email, password, history, location)=>{
+    const passwordLogin = (email, password, history,location )=>{
       setIsLoading(true)
        signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        const destination = location?.state?.from || '/Home';
-        history.push(destination);
-        setFirebaseError('');
+        const redirect = location?.state?.from || '/';
+        history.push(redirect)
      })
         .catch((error) => {
           setFirebaseError(error.message);
         })
         .finally(()=> setIsLoading(false));
+        
       }
     //google sign in---------------------------google
     const googleLogin =(history, location)=>{
@@ -102,7 +102,7 @@ const useFirebase =()=>{
     // // saved user in database---------------------//
     const savedUser=(email,displayName, method)=>{
       const user = {email, displayName};
-      const url='http://localhost:3020/users'
+      const url='https://blooming-basin-45530.herokuapp.com/users'
       fetch(url,{
         method:method,
         headers:{
@@ -116,7 +116,7 @@ const useFirebase =()=>{
     }
     //  admin --------------------------call admin
      useEffect(()=>{
-       const url = `http://localhost:3020/users/${user.email}`
+       const url = `https://blooming-basin-45530.herokuapp.com/users/${user.email}`
        fetch(url)
        .then(res=>res.json())
        .then(data=>setAdmin(data.admin))

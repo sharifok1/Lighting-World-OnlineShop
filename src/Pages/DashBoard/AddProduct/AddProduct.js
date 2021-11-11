@@ -10,7 +10,7 @@ const AddProduct = () => {
 
   const onSubmit = data => {
     // setProduct(data);
-    const url  = 'http://localhost:3020/allProducts'
+    const url  = 'https://blooming-basin-45530.herokuapp.com/allProducts'
     fetch(url, {
       method:'POST',
       headers:{

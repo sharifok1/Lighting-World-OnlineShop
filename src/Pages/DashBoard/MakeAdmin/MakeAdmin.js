@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        const url = 'http://localhost:3020/user/admin'
+        const url = 'https://blooming-basin-45530.herokuapp.com/user/admin'
         fetch(url,{
             method:'PUT',
             headers:{
