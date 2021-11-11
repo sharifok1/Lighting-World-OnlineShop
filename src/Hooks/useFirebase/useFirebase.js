@@ -26,7 +26,7 @@ const useFirebase =()=>{
         setUser(newUser);
 
         //save use to the database-------------------saveduser
-        // savedUser(email, name, 'POST')
+        savedUser(email, name, 'POST')
         //update profile
         updateProfile(auth.currentUser, {
           displayName: name
@@ -65,8 +65,8 @@ const useFirebase =()=>{
       .then((result) => {
         const user = result.user;
         setUser(user)
-        //saved user to the data base-----------------------saved user
-        // savedUser(user.email, user.displayName, 'PUT')
+        //saved google user to the data base-----------------------saved user
+        savedUser(user.email, user.displayName, 'PUT')
         setFirebaseError('');
         const destination = location?.state?.from || '/Home';
         history.replace(destination)
@@ -100,27 +100,27 @@ const useFirebase =()=>{
         .finally(()=> setIsLoading(false))
     };
     // // saved user in database---------------------//
-    // const savedUser=(email,displayName, method)=>{
-    //   const user = {email, displayName};
-    //   const url='http://localhost:3010/users'
-    //   fetch(url,{
-    //     method:method,
-    //     headers:{
-    //         'content-type':'application/JSON'
-    //      },
-    //      body:JSON.stringify(user)
-    //   })
-    //   .then(res=>{
+    const savedUser=(email,displayName, method)=>{
+      const user = {email, displayName};
+      const url='http://localhost:3020/users'
+      fetch(url,{
+        method:method,
+        headers:{
+            'content-type':'application/JSON'
+         },
+         body:JSON.stringify(user)
+      })
+      .then(res=>{
 
-    //   })
-    // }
-     // admin --------------------------call admin
-    //  useEffect(()=>{
-    //    const url = `http://localhost:3010/users/${user.email}`
-    //    fetch(url)
-    //    .then(res=>res.json())
-    //    .then(data=>setAdmin(data.admin))
-    //  },[user.email]);
+      })
+    }
+    //  admin --------------------------call admin
+     useEffect(()=>{
+       const url = `http://localhost:3020/users/${user.email}`
+       fetch(url)
+       .then(res=>res.json())
+       .then(data=>setAdmin(data.admin))
+     },[user.email]);
 
     return{
         user,

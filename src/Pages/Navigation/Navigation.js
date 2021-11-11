@@ -49,8 +49,8 @@ const Navigation = () => {
                   <>
                     <NavLink to="/Dashboard" className="navText">Dashboard</NavLink>
                     <small style={{backgroundColor:"#fff",color:"#000", padding:'2px',borderRadius:'5px'}}>
-                      {user.displayName.split(" ",1)}</small>
-                    <Button onClick={logOutHandler}>LogOut</Button>
+                      {user.displayName}</small>
+                    <Button onClick={logOutHandler}><img className="logOut-ico" src="https://i.ibb.co/mXHQxyL/logout-ico.png" alt="" /></Button>
                  </>:
                 <NavLink to="/Login" className="navText">Login</NavLink>
               }  
