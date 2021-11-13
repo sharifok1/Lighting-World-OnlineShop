@@ -25,15 +25,13 @@ function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const {user, logOut, admin} = useAuth()
-//   const {admin} = UseAuth();
-  console.log(admin)
 
   let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
   const logOutHandler =()=>{
-     alert('You are going to logout!!!');
+    
      logOut()
 
   }
@@ -42,7 +40,7 @@ function Dashboard(props) {
   const drawer = (
     
     <div
-    style={{backgroundColor:'#777',color:'#fff'}}  sx={{ fontWeight: 500 }}
+      sx={{ fontWeight: 500 }}
     >
       <Toolbar 
        sx={{mt:-7}}
@@ -60,9 +58,7 @@ function Dashboard(props) {
           <NavLink to={`${url}/ManageProduct`}><Button sx={{color:'#000',fontSize: 18}} >Manage Product</Button></NavLink>
           <NavLink to={`${url}/AddProduct`}><Button sx={{color:'#000',fontSize: 18}} >Add A product</Button></NavLink>
       </Box>
-        }
-          
-                
+        }          
         
       <List>
         {[ 

@@ -91,6 +91,8 @@ const useFirebase =()=>{
 
     //signOut------------------------------loguot
     const logOut=()=>{
+      const doit = window.confirm('Are you sure You want to loged out?');
+      if(doit){
         const auth = getAuth();
          signOut(auth)
          .then(() => {
@@ -98,6 +100,8 @@ const useFirebase =()=>{
           setFirebaseError(error.message);
         })
         .finally(()=> setIsLoading(false))
+      }
+        
     };
     // // saved user in database---------------------//
     const savedUser=(email,displayName, method)=>{

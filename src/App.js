@@ -8,6 +8,7 @@ import PrivateRoute from './Pages/Authentication/PrivateRoute/PrivateRoute';
 import Registration from './Pages/Authentication/Registration/Registration';
 import Dashboard from './Pages/DashBoard/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
+import MakeOrder from './Pages/makeOrder/MakeOrder';
 import Navigation from './Pages/Navigation/Navigation';
 
 
@@ -25,15 +26,18 @@ function App() {
           <Route path="/Home">
           <Home></Home>
           </Route>
-          <PrivateRoute path="/AllProduct">
+          <Route path="/AllProduct">
           <AllProduct></AllProduct>
-          </PrivateRoute>
+          </Route>
+          <Route path="/MakeOrder/:_id">
+          <MakeOrder></MakeOrder>
+          </Route>
           <Route path="/DisplayProduct">
           <AllProduct></AllProduct>
           </Route>
-          <Route path="/Dashboard">
+          <PrivateRoute path="/Dashboard">
           <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
           <Route path="/Login">
           <Login></Login>
           </Route>

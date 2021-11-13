@@ -7,7 +7,7 @@ import Topbanner from './Topbanner/Topbanner';
 
 const Home = () => {
     return (
-      <div>
+      <div  style={{backgroundColor:'#e3e3e3'}}>
            <Topbanner></Topbanner>
             <OfferSlider></OfferSlider>
             <DisplayProduct></DisplayProduct>

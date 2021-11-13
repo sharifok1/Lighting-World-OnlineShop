@@ -1,0 +1,31 @@
+.DisplayImg{
+    max-width: 300px;
+    max-height: 220px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.displayCard{
+    border: 1px solid black;
+    padding: 10px;
+    padding-bottom: 20px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    box-shadow: 6px 6px 15px 1px #7a7;
+    transition: .5s;
+}
+.displayCard:hover{
+    transform: scale(1.05);
+}
+.Ordeerbtn{
+    width: 50%;
+    border-radius: 5px;
+    padding: 8px;
+    outline: none;
+    border:.5px solid #777;
+    color:white;
+    background-color: rgb(231, 162, 71);
+    font-size: 18px;
+}
+.Ordeerbtn:hover{
+    background-color: rgb(119, 107, 221);
+}

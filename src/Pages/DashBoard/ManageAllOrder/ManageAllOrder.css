@@ -1,0 +1,33 @@
+.manage-order-card{
+    border:1px solid black;
+    margin: 5px;
+    background-color: rgb(235, 163, 211);
+    border-radius: 10px;
+ 
+}
+.manageOrderbtn{
+   width: 80%;
+   padding: 7px;
+   border-radius: 5px;
+   border:0px;
+   font-weight: 600;
+   background-color:rgba(250, 124, 51, 0.932);
+   cursor: pointer;
+   margin: 5px;
+}
+.manageOrderbtn:hover{
+    background-color: rgb(21, 110, 226);
+}
+.deletebtn{
+    width: 80%;
+   padding: 7px;
+   border-radius: 5px;
+   border:0px;
+   font-weight: 600;
+   background-color:rgba(51, 71, 250, 0.932);
+   cursor: pointer;
+   margin: 5px;
+}
+.deletebtn:hover{
+    background-color: rgb(233, 40, 40);
+}

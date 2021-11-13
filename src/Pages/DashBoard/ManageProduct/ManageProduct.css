@@ -1,0 +1,36 @@
+.productImg{
+    width:100%;
+    border-radius: 10px;
+    max-height:100px ;
+    margin: 10px;
+}
+.manage-product-card{
+    border:1px solid black;
+    margin: 5px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+ 
+}
+.delete-btn{
+    background-color: cornflowerblue;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+    align-items: center;
+    height: 40px;
+    color:#fff;
+    font-weight: 550;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    color:#000;
+}
+.delete-btn:hover{
+    background-color:rgb(241, 34, 34);
+    color:#fff;
+}
+.btn-position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
