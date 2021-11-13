@@ -11,6 +11,7 @@ const ExploreProduct = ({product}) => {
              <h3>{product.Name}</h3>
              <p>{product.Description.slice(0,120)}</p>
              <h3>Price:${product.Price}</h3>
+             
           <NavLink to={`/MakeOrder/${product._id}`} className="Ordeerbtn" >Order Now</NavLink>
         </div>
     </Grid>
