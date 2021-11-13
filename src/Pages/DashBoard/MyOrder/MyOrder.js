@@ -17,7 +17,7 @@ const MyOrder = () => {
     },[num]);
 
     const myWonOrder = products.filter(order=>order.email === user.email)
-
+    console.log(myWonOrder)
 
     const CancelOrderDltHandler=(id)=>{
         const doYou = window.confirm('You are going to remove orderd')
@@ -50,7 +50,12 @@ const MyOrder = () => {
                       id:{product._id}
                     </Grid>
                     <Grid item xs={12} md={4} lg={4} className='MyOrderposition'>
-                        <p className='status'>Status : Pending </p>
+                        {
+                            product.orderStatus?  <p className='statusAc'>Status : Accepted </p>
+                            :
+                            <p className='statusPe'>Status : Pending </p>
+                        }
+                       
                        <button onClick={()=>CancelOrderDltHandler(product._id)} className='delete-btn'>Cancel this Order</button>
                     </Grid>
                     </Grid> 

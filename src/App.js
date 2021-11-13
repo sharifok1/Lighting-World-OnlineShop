@@ -29,9 +29,9 @@ function App() {
           <Route path="/AllProduct">
           <AllProduct></AllProduct>
           </Route>
-          <Route path="/MakeOrder/:_id">
+          <PrivateRoute path="/MakeOrder/:_id">
           <MakeOrder></MakeOrder>
-          </Route>
+          </PrivateRoute>
           <Route path="/DisplayProduct">
           <AllProduct></AllProduct>
           </Route>

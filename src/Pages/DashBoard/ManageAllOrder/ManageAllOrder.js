@@ -1,4 +1,5 @@
 import {Grid } from '@mui/material';
+// import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './ManageAllOrder.css'
 
@@ -30,8 +31,24 @@ const ManageAllOrder = () => {
         }
         
     }
+
+    const AcceptOrderHandler=(condition,_id)=>{
+            const url = "https://blooming-basin-45530.herokuapp.com/order/status"
+             fetch(url,{
+               method:'PUT',
+               headers:{
+                'content-type':"application/json"
+              },
+              body:JSON.stringify( {id:_id,status:condition})
+            })
+            .then(res=>{
+                alert('order successfully accepted')
+            })
+            
+        }
     return (
         <div>
+            <h1>All customer order</h1>
             {
                 products.map(product=><div key={product._id}
                 className='manage-order-card'
@@ -43,14 +60,14 @@ const ManageAllOrder = () => {
                     <Grid item xs={8} md={5} lg={6}>
                       <h3>{product.name}</h3>
                       <h3>Cost:${product.total}</h3>
-                      
+                      user:{product.email}
                     </Grid>
                     <Grid item xs={12} md={4} lg={4} className=''>
-                    user:{product.email}
-                       <button onClick={()=>CancelOrderDltHandler(product._id)} className='manageOrderbtn'>Accept Order</button>
+                       <button onClick={()=>AcceptOrderHandler('accepted',product._id)} className='manageOrderbtn'>Accept Order</button>
                        <button onClick={()=>CancelOrderDltHandler(product._id)} className='deletebtn'>Cancel Order</button>
                     </Grid>
                     </Grid> 
+                  
                 </div>)
             }
         </div>
