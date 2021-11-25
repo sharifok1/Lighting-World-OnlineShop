@@ -5,7 +5,6 @@ import { styled } from '@mui/material/styles';
 import { Box} from '@mui/system';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Rating from '@mui/material/Rating';
-// import useAuth from '../../../Hooks/useAuth/useAuth';
 import { Typography } from '@mui/material';
 
 

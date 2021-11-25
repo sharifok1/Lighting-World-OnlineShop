@@ -11,6 +11,7 @@ This project is a niche-product-website. And sell decoration light .Project Name
 - Font-awsome
 - env-dot
 - react-router-dom
+- react hooks form
 
 # Project spacification
 A general user can do some effective activites on Lighting World web site..
@@ -22,6 +23,12 @@ A general user can do some effective activites on Lighting World web site..
 - Admin can be add product and able to delete a product
 - If admin want he can cancel or accept order
 - User all data will be stored to our database
+
+# Project tools
+- VS Code 
+- MongoDB Atlas
+- Heroku
+- Firebase
 
 ### for more information please feel free to knock me -
 
